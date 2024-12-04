@@ -1,12 +1,59 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/inter/inter-regular-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/inter/inter-medium-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/inter/inter-semi-bold-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/inter/inter-bold-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
 :root {
-  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --green: #59b17a;
+  --green-hover: #3f945f;
+  --green-disabled: rgba(89, 177, 122, 0.1);
+  --background: #f7f8fa;
+  --background-card-green: #e7f1ed;
+  --background-rectangle-green: rgba(89, 177, 122, 0.08);
+  --white: #ffffff;
+  --black: #1d1e21;
+  --red: #e85050;
+  --red-disabled: rgba(232, 80, 80, 0.1);
+  --yellow-star: #ffc531;
+  --text-grey: #93939a;
+  --text-white: #f1f1f1;
+  --icon-border: rgba(247, 248, 250, 0.1);
+  --elements-grey: rgba(247, 248, 250, 0.3);
+  --button-border-white: rgba(241, 241, 241, 0.5);
+  --placeholder: rgba(29, 30, 33, 0.4);
+
+  font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
 
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #f0f4f9;
+  background-color: var(--background);
+  color: var(--black);
+
+  --animation: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +65,7 @@ body {
   margin: 0, auto;
   min-width: 320px;
   min-height: 100vh;
-  font-family: Roboto, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
 }
 
