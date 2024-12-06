@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  width: 100%;
+  max-width: 190px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    max-width: 478px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navigation {
+    max-width: 758px;
+  }
+}

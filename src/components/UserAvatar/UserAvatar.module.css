@@ -1,0 +1,27 @@
+.userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: var(--green-disabled);
+}
+
+.avatarLetter {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--green);
+}
+
+.white {
+  background-color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .userAvatar {
+    width: 44px;
+    height: 44px;
+  }
+}

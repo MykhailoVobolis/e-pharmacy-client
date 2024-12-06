@@ -1,0 +1,34 @@
+.authContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.registerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--green);
+  border: 1px solid var(--green-border);
+  border-radius: 100px;
+  width: 119px;
+  height: 46px;
+}
+
+.loginLink {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--green);
+}
+
+.whiteRegister {
+  color: var(--text-white);
+  border: 1px solid var(--button-border-white);
+}
+
+.whiteLogin {
+  color: var(--text-white);
+}

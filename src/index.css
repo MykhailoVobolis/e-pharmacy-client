@@ -30,7 +30,9 @@
   --green: #59b17a;
   --green-hover: #3f945f;
   --green-disabled: rgba(89, 177, 122, 0.1);
+  --green-border: rgba(89, 177, 122, 0.5);
   --background: #f7f8fa;
+  --border-nav-item: #d9d9d9;
   --background-card-green: #e7f1ed;
   --background-rectangle-green: rgba(89, 177, 122, 0.08);
   --white: #ffffff;
@@ -40,8 +42,9 @@
   --yellow-star: #ffc531;
   --text-grey: #93939a;
   --text-white: #f1f1f1;
-  --icon-border: rgba(247, 248, 250, 0.1);
+  --icon-border: rgba(250, 247, 249, 0.1);
   --elements-grey: rgba(247, 248, 250, 0.3);
+  --social-icon-hover-border: rgba(247, 248, 250, 0.5);
   --button-border-white: rgba(241, 241, 241, 0.5);
   --placeholder: rgba(29, 30, 33, 0.4);
 

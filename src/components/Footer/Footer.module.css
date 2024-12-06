@@ -1,0 +1,33 @@
+.footerSection {
+  /* height: 328px; */
+  padding: 40px 0;
+  background-color: var(--green);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerNavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 628px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1184px;
+  }
+}

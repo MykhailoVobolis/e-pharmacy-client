@@ -1,0 +1,33 @@
+.cartBadgeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border: solid 1px var(--border-nav-item);
+  border-radius: 100px;
+  position: relative;
+}
+
+.cartBadgeIcon {
+  stroke: var(--green);
+  font-size: 16px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: var(--green-disabled);
+  background-color: var(--background-card-green);
+  border-radius: 100px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--green);
+}

@@ -1,0 +1,21 @@
+.mainLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .mainLogo {
+    gap: 14px;
+    font-size: 20px;
+  }
+}

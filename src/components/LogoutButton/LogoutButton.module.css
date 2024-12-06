@@ -1,0 +1,23 @@
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--green-border);
+  border-radius: 100px;
+  width: 115px;
+  height: 46px;
+  background-color: transparent;
+  color: var(--green);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.white {
+  border: 1px solid var(--button-border-white);
+  color: var(--text-white);
+}
+
+@media screen and (min-width: 1440px) {
+}

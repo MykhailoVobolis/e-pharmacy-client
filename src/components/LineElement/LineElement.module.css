@@ -1,0 +1,5 @@
+.lineElement {
+  height: 1px;
+  background-color: var(--elements-grey);
+  margin-bottom: 40px;
+}

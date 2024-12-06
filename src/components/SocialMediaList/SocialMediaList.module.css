@@ -1,0 +1,24 @@
+.socialListContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: solid 1px var(--icon-border);
+  border-radius: 10px;
+  transition: border-color var(--animation);
+}
+
+.link:hover {
+  border-color: var(--social-icon-hover-border);
+}
+
+.socialIcon {
+  fill: var(--background);
+}
