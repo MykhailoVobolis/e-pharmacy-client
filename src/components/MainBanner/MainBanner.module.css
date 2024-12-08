@@ -1,0 +1,36 @@
+.hero {
+  padding-top: 184px;
+  padding-bottom: 302px;
+  background-image: url(/src/assets/images/hero-background-image.png);
+  background-color: var(--green);
+  background-repeat: no-repeat;
+  background-position: top 44px left 50%;
+  background-size: 749px 508px;
+}
+
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-devide-pixel-ratio: 2) {
+  .hero {
+    background-image: url(/src/assets/images/hero-background-image@2x.png);
+  }
+}
+
+.titleWrapper {
+  width: 609px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainTitle {
+  font-weight: 600;
+  font-size: 74px;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.text {
+  width: 207px;
+  line-height: 1.25;
+  color: var(--white);
+  margin-left: 383px;
+}

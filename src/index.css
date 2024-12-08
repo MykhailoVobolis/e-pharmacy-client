@@ -34,6 +34,7 @@
   --background: #f7f8fa;
   --border-nav-item: #d9d9d9;
   --background-card-green: #e7f1ed;
+  --background-card-white: #fdfdfd;
   --background-rectangle-green: rgba(89, 177, 122, 0.08);
   --white: #ffffff;
   --black: #1d1e21;
@@ -47,6 +48,7 @@
   --social-icon-hover-border: rgba(247, 248, 250, 0.5);
   --button-border-white: rgba(241, 241, 241, 0.5);
   --placeholder: rgba(29, 30, 33, 0.4);
+  --banner-text: #252539;
 
   font-family: Inter, sans-serif;
   line-height: 1.5;

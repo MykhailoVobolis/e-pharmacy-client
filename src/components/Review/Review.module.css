@@ -1,0 +1,19 @@
+.authorName {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.testimonial {
+  line-height: 1.25;
+  text-align: center;
+  color: var(--text-grey);
+}
+
+.reviewPhoto {
+  position: absolute;
+  left: 50%;
+  top: -24px;
+  transform: translate(-50%);
+}

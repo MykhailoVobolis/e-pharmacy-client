@@ -1,0 +1,13 @@
+.storesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 36px;
+  row-gap: 38px;
+}
+
+.storeItem {
+  width: calc((100% - 72px) / 3);
+}

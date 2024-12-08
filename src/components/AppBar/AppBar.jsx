@@ -12,7 +12,7 @@ import css from "./AppBar.module.css";
 
 export default function AppBar() {
   //   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   const { pathname } = useLocation();
   const isHome = pathname.includes("home");

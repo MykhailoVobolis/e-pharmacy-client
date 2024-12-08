@@ -4,9 +4,6 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   height: 100%;
   max-width: 375px;
   margin-left: auto;
@@ -14,24 +11,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  .pageContainer {
-    padding: 116px 0 106px 0;
-  }
-
   .container {
-    gap: 98px;
-    max-width: 628px;
+    max-width: 704px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .pageContainer {
-    padding-top: 44px;
-  }
-
   .container {
-    flex-direction: row;
-    gap: 80px;
     max-width: 1248px;
   }
 }

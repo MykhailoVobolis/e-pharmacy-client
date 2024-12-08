@@ -1,0 +1,22 @@
+.promoSection {
+  padding-top: 64px;
+  padding-bottom: 60px;
+}
+
+.bannersList {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+.bannerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px 18px;
+  border: solid 1.15px var(--text-white);
+  border-radius: 27px;
+  width: 321px;
+  box-shadow: 0 -1px 14px 0 rgba(29, 30, 33, 0.02);
+  background-color: var(--background-card-white);
+}
