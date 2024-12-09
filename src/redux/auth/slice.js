@@ -3,23 +3,43 @@ import { logIn, logOut, refreshUser, register } from "./operations.js";
 
 const handlePending = (state) => {
   state.loading = true;
+  state.authProcess = true;
 };
 
 const handleRejected = (state) => {
   state.loading = false;
+  state.error = true;
+  state.authProcess = false;
 };
 
 // Стан даних про користувача
-const authSlise = createSlice({
+const authSlice = createSlice({
   name: "auth",
   initialState: {
     user: {
       name: null,
       email: null,
     },
-    token: null,
+    accessToken: null,
+    refreshToken: null,
     isLoggedIn: false,
     isRefrreshing: false,
+    loading: false,
+    authProcess: true,
+    error: null,
+  },
+  reducers: {
+    setTokens(state, action) {
+      state.accessToken = action.payload.accessToken;
+      state.refreshToken = action.payload.refreshToken;
+    },
+    clearTokens(state) {
+      state.accessToken = null;
+      state.refreshToken = null;
+    },
+    finishAuthProcess(state) {
+      state.authProcess = false; // Завершення перевірки сесії
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -28,9 +48,11 @@ const authSlise = createSlice({
       .addCase(register.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.user = action.payload.user;
-        state.token = action.payload.token;
+        state.user = action.payload.data;
+        state.accessToken = action.payload.accessToken;
+        state.refreshToken = action.payload.refreshToken;
         state.isLoggedIn = true;
+        state.authProcess = false;
       })
       .addCase(register.rejected, handleRejected)
       // Обробка операції логіну користувача
@@ -38,9 +60,12 @@ const authSlise = createSlice({
       .addCase(logIn.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
+        state.user = action.payload.data;
+        state.accessToken = action.payload.accessToken;
+        state.refreshToken = action.payload.refreshToken;
         state.user = action.payload.user;
-        state.token = action.payload.token;
         state.isLoggedIn = true;
+        state.authProcess = false;
       })
       .addCase(logIn.rejected, handleRejected)
       // Обробка операції логауту (вихода користувача з облікового запису App)
@@ -52,8 +77,10 @@ const authSlise = createSlice({
           name: null,
           email: null,
         };
-        (state.token = null), state.isLoggedIn;
+        state.accessToken = null;
+        state.refreshToken = null;
         state.isLoggedIn = false;
+        state.authProcess = false;
       })
       .addCase(logOut.rejected, handleRejected)
       // Обробка операції рефрешу користувача
@@ -61,14 +88,19 @@ const authSlise = createSlice({
         state.isRefrreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        state.user = action.payload;
+        state.user.name = action.payload.userName;
+        state.user.email = action.payload.userEmail;
         state.isLoggedIn = true;
         state.loading = false;
         state.isRefrreshing = false;
+        state.authProcess = false;
       })
       .addCase(refreshUser.rejected, (state) => {
         state.isRefrreshing = false;
+        state.authProcess = false;
       });
   },
 });
-export const authReduser = authSlise.reducer;
+
+export const { setTokens, clearTokens, finishAuthProcess } = authSlice.actions;
+export const authReduser = authSlice.reducer;

@@ -1,15 +1,12 @@
 import clsx from "clsx";
-
 import { useSelector } from "react-redux";
-// import { selectUser } from "../../redux/auth/selectors.js";
+
+import { selectUser } from "../../redux/auth/selectors.js";
 
 import css from "./UserAvatar.module.css";
 
 export default function UserAvatar({ variant }) {
-  //   const user = useSelector(selectUser);
-  const user = {
-    name: "Admin",
-  };
+  const user = useSelector(selectUser);
 
   const avatarLetter = user?.name ? user.name[0] : null;
 

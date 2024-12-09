@@ -1,0 +1,26 @@
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100px;
+  padding: 13px 112px;
+  width: 280px;
+  height: 44px;
+  background-color: var(--green);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--white);
+  margin-bottom: 14px;
+  transition: background-color var(--animation);
+}
+
+.formButton:hover {
+  background-color: var(--green-hover);
+}
+
+.login {
+  width: 323px;
+}

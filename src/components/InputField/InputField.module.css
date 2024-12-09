@@ -1,0 +1,63 @@
+.inputGroup {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.inputField {
+  border: 1px solid rgba(29, 30, 33, 0.1);
+  border-radius: 100px;
+  width: 279px;
+  background-color: #fff;
+  font-size: 12px;
+  padding: 12px 14px;
+  outline: transparent;
+  outline-offset: 4px;
+  line-height: 1.5;
+  transition: border-color var(--animation);
+}
+
+.login {
+  width: 323px;
+}
+
+.inputField:hover {
+  border-color: var(--green);
+}
+
+.inputField::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--placeholder);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  position: absolute;
+  top: 43px;
+  color: var(--red);
+}
+
+.inputError,
+.inputError:hover {
+  border-color: var(--red);
+}
+
+@media screen and (min-width: 768px) {
+  .errorMessage {
+    font-size: 10px;
+  }
+}

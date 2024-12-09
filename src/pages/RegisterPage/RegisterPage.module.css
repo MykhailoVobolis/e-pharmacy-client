@@ -1,12 +1,22 @@
 .pageContainer {
   margin-left: auto;
   margin-right: auto;
+  height: 100vh;
+  background-image: url(/src/assets/images/elements.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  background-size: 279px 257px;
+}
+
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-devide-pixel-ratio: 2) {
+  .pageContainer {
+    background-image: url(/src/assets/images/elements@2x.png);
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   height: 100%;
   max-width: 375px;
   margin-left: auto;
@@ -19,19 +29,20 @@
   }
 
   .container {
-    gap: 98px;
     max-width: 628px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .pageContainer {
-    padding-top: 44px;
+    padding: 28px 100px 262px 100px;
+    max-width: 1440px;
   }
 
   .container {
     flex-direction: row;
-    gap: 80px;
-    max-width: 1248px;
+    gap: 54px;
+    padding-top: 122px;
+    max-width: 1240px;
   }
 }
