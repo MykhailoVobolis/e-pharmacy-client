@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsRefreshing } from "../../redux/auth/selectors.js";
 import { refreshUser } from "../../redux/auth/operations.js";
 import { finishAuthProcess } from "../../redux/auth/slice.js";
+import { getUserCart } from "../../redux/cart/operations.js";
+
 import RestrictedRoute from "../RestrictedRoute.jsx";
 import PrivateRoute from "../PrivateRoute.jsx";
 
@@ -15,13 +17,19 @@ const RegisterPage = lazy(() => import("../../pages/RegisterPage/RegisterPage.js
 const LoginPage = lazy(() => import("../../pages/LoginPage/LoginPage.jsx"));
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 const CartPage = lazy(() => import("../../pages/CartPage/CartPage.jsx"));
+const MedicineStorePage = lazy(() => import("../../pages/MedicineStorePage/MedicineStorePage.jsx"));
 
 export default function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
-    dispatch(refreshUser()).finally(() => {});
+    dispatch(refreshUser())
+      .unwrap()
+      .then(() => {
+        dispatch(getUserCart());
+      })
+      .finally(() => {});
     dispatch(finishAuthProcess());
   }, [dispatch]);
 
@@ -35,6 +43,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<HomePage />} />
           <Route path="cart" element={<PrivateRoute component={<CartPage />} redirectTo="/login" />} />
+          <Route path="medicine-store" element={<MedicineStorePage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -3,6 +3,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from "redux-persist/lib/storage";
 import { storesReduser } from "./stores/slice.js";
 import { authReduser } from "./auth/slice.js";
+import { cartReduser } from "./cart/slice.js";
 
 // Збереження токіна в Local Storage
 const authPersistConfig = {
@@ -19,6 +20,7 @@ export const store = configureStore({
     stores: storesReduser,
     // filters: filtersReducer,
     auth: persistedAuthReducer,
+    cart: cartReduser,
     // modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>

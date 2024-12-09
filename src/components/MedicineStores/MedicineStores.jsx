@@ -11,7 +11,7 @@ export default function MedicineStores() {
     <section className={css.medicineStoresSection}>
       <h2 className={css.title}>Your Nearest Medicine Store</h2>
       <p className={css.description}>Search for Medicine, Filter by your location</p>
-      {stores.length > 0 && <Stores stores={stores} />}
+      {stores.length > 0 && <Stores stores={stores} variant={"nearest"} />}
     </section>
   );
 }

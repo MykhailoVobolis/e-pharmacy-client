@@ -1,0 +1,30 @@
+.addressWrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.mapIcon,
+.phoneIcon {
+  stroke: var(--green);
+}
+
+.addressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address,
+.city,
+.phone {
+  text-decoration: none;
+  line-height: 1.25;
+  color: var(--text-grey);
+}
+
+.phoneWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

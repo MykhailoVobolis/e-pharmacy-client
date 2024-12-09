@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signUpSchema, singInSchema } from "../../utils/validationSchemas.js";
 import { useDispatch } from "react-redux";
 import { logIn, register } from "../../redux/auth/operations.js";
+import { getUserCart } from "../../redux/cart/operations.js";
 
 import InputField from "../InputField/InputField.jsx";
 import FormButton from "../FormButton/FormButton.jsx";
@@ -25,6 +26,7 @@ export default function AuthForm({ link, authPromt, type, title }) {
     dispatch(type === "register" ? register(userData) : logIn(userData))
       .unwrap()
       .then((response) => {
+        dispatch(getUserCart());
         methods.reset();
       })
       .catch((error) => {

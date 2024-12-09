@@ -4,10 +4,19 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.storeItem {
+  width: calc((100% - 40px) / 3);
+}
+
+.containerVariant {
   column-gap: 36px;
   row-gap: 38px;
 }
 
-.storeItem {
+.itemVariant {
   width: calc((100% - 72px) / 3);
 }

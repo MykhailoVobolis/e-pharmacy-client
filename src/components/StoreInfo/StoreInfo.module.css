@@ -1,0 +1,47 @@
+.infoStore {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ratingIcon {
+  fill: var(--yellow-star);
+}
+
+.rating {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: var(--green-disabled);
+}
+
+.statusWrapperClose {
+  background-color: var(--red-disabled);
+}
+
+.status {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.statusClose {
+  color: var(--red);
+}

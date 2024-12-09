@@ -21,3 +21,13 @@ export const fetchCustomerReviews = createAsyncThunk("stores/fetchCustomerReview
     return thunkAPI.rejectWithValue({ message: errorMessage });
   }
 });
+
+export const fetchAllStores = createAsyncThunk("stores/fetchAllStores", async (_, thunkAPI) => {
+  try {
+    const response = await axios.get("/stores");
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleError(error);
+    return thunkAPI.rejectWithValue({ message: errorMessage });
+  }
+});

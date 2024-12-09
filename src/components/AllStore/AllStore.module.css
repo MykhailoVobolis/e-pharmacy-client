@@ -4,26 +4,43 @@
   background-color: var(--background-card-green);
   border: 1.15px solid var(--text-white);
   border-radius: 27px;
-  padding: 40px 40px 46px 40px;
+  padding: 40px 40px 40px 40px;
   position: relative;
   overflow: hidden;
 }
 
-.aboutContainer {
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 34px;
+  margin-top: 36px;
 }
 
 .name {
-  max-width: 180px;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.4;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 20px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 34px;
+  border-radius: 100px;
+  background-color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--white);
+  transition: background-color var(--animation);
+}
+
+.link:hover {
+  background-color: var(--green-hover);
 }
 
 /* Декоративні псевдоелементи */
@@ -36,8 +53,8 @@
   width: 198px;
   height: 42px;
   transform: rotate(22deg);
-  bottom: 42px;
-  right: -115px;
+  bottom: 230px;
+  right: -100px;
   box-shadow: -58px 50px 0 var(--background-rectangle-green),
     /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
 }

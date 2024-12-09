@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCustomerReviews, fetchNearestStores } from "./operations.js";
+import { fetchAllStores, fetchCustomerReviews, fetchNearestStores } from "./operations.js";
 
 const handlePending = (state) => {
   state.loading = true;
@@ -13,6 +13,7 @@ const handleRejected = (state) => {
 const storesSlice = createSlice({
   name: "stores",
   initialState: {
+    allStores: [],
     nearestStores: [],
     loading: false,
     error: null,
@@ -34,7 +35,15 @@ const storesSlice = createSlice({
         state.error = null;
         state.customerReviews = action.payload.data;
       })
-      .addCase(fetchCustomerReviews.rejected, handleRejected);
+      .addCase(fetchCustomerReviews.rejected, handleRejected)
+
+      .addCase(fetchAllStores.pending, handlePending)
+      .addCase(fetchAllStores.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.allStores = action.payload.data;
+      })
+      .addCase(fetchAllStores.rejected, handleRejected);
   },
 });
 
