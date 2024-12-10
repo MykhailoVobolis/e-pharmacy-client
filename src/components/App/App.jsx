@@ -18,6 +18,8 @@ const LoginPage = lazy(() => import("../../pages/LoginPage/LoginPage.jsx"));
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 const CartPage = lazy(() => import("../../pages/CartPage/CartPage.jsx"));
 const MedicineStorePage = lazy(() => import("../../pages/MedicineStorePage/MedicineStorePage.jsx"));
+const MedicinePage = lazy(() => import("../../pages/MedicinePage/MedicinePage.jsx"));
+const ProductPage = lazy(() => import("../../pages/ProductPage/ProductPage.jsx"));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -44,6 +46,8 @@ export default function App() {
           <Route path="home" element={<HomePage />} />
           <Route path="cart" element={<PrivateRoute component={<CartPage />} redirectTo="/login" />} />
           <Route path="medicine-store" element={<MedicineStorePage />} />
+          <Route path="medicine" element={<MedicinePage />} />
+          <Route path="product" element={<ProductPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

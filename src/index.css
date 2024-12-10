@@ -49,6 +49,7 @@
   --button-border-white: rgba(241, 241, 241, 0.5);
   --placeholder: rgba(29, 30, 33, 0.4);
   --banner-text: #252539;
+  --shadow: rgba(18, 20, 23, 0.08);
 
   font-family: Inter, sans-serif;
   line-height: 1.5;

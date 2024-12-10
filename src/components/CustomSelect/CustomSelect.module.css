@@ -1,0 +1,85 @@
+.customSelect {
+  position: relative;
+  width: 214px;
+  padding: 13px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(29, 30, 33, 0.1);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: border-color var(--animation);
+}
+
+.customSelect:hover {
+  border-color: var(--green);
+}
+
+.selectedOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectPlaceholder {
+  font-size: 12px;
+  color: var(--text-grey);
+}
+
+.selectIcon {
+  stroke: var(--black);
+  transition: var(--animation);
+}
+
+.selectIcon.isOpen {
+  transform: rotate(180deg);
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  width: 189px;
+  border-radius: 15px;
+  padding: 10px 10px;
+  top: 52px;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  box-shadow: 0 4px 47px 0 var(--shadow);
+  z-index: 99;
+  overflow-y: auto;
+}
+
+.optionItem {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--black);
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.optionItem:hover {
+  background-color: var(--green-disabled);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  position: absolute;
+  top: 46px;
+  left: 0px;
+  color: var(--error);
+}
+
+@media screen and (min-width: 768px) {
+  .errorMessage {
+    font-size: 12px;
+  }
+
+  .modalCustomSelect {
+    width: 204px;
+    margin-bottom: 70px;
+  }
+}

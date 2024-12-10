@@ -23,10 +23,8 @@ export default function MedicineStorePage() {
   ) : (
     <section className={css.pageContainer}>
       <div className={css.container}>
-        <section className={css.medicineStoreSection}>
-          <h2 className={css.title}>Medicine store</h2>
-          {stores.length > 0 && <Stores stores={stores} />}
-        </section>
+        <h2 className={css.title}>Medicine store</h2>
+        {stores.length > 0 && <Stores stores={stores} />}
       </div>
     </section>
   );

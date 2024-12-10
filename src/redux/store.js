@@ -4,6 +4,8 @@ import storage from "redux-persist/lib/storage";
 import { storesReduser } from "./stores/slice.js";
 import { authReduser } from "./auth/slice.js";
 import { cartReduser } from "./cart/slice.js";
+import { productsReduser } from "./products/slice.js";
+import { filtersReduser } from "./filters/slice.js";
 
 // Збереження токіна в Local Storage
 const authPersistConfig = {
@@ -18,9 +20,10 @@ const persistedAuthReducer = persistReducer(authPersistConfig, authReduser);
 export const store = configureStore({
   reducer: {
     stores: storesReduser,
-    // filters: filtersReducer,
+    filters: filtersReduser,
     auth: persistedAuthReducer,
     cart: cartReduser,
+    products: productsReduser,
     // modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>

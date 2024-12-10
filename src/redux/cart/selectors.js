@@ -1,6 +1,6 @@
 export const selectLoading = (state) => state.cart.loading;
 
-export const selectProducts = (state) => state.cart.products;
+export const selectCartProducts = (state) => state.cart.products;
 
 export const selectTotalPrice = (state) => state.cart.totalPrice;
 
