@@ -10,7 +10,7 @@ export default function LoginPage() {
       <MainLogo />
       <div className={css.container}>
         <MainContent />
-        <AuthForm type={"login"} title={"Login"} link={"/register"} authPromt={"Don't have an account?"} />
+        <AuthForm type={"login"} title={"Log in"} link={"/register"} authPromt={"Don't have an account?"} />
       </div>
     </section>
   );

@@ -21,6 +21,14 @@
   background-color: var(--green-hover);
 }
 
+.registerModal,
 .login {
-  width: 323px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .registerModal,
+  .login {
+    width: 323px;
+  }
 }

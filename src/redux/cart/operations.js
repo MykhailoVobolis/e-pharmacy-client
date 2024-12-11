@@ -11,3 +11,15 @@ export const getUserCart = createAsyncThunk("cart/getUserCart", async (_, thunkA
     return thunkAPI.rejectWithValue({ status: error.response?.status, message: errorMessage });
   }
 });
+
+export const addProductsToCart = createAsyncThunk("cart/addProductToCart", async (newProduct, thunkAPI) => {
+  try {
+    const response = await axios.put("/cart/update", {
+      products: newProduct,
+    });
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleError(error);
+    return thunkAPI.rejectWithValue({ status: error.response?.status, message: errorMessage });
+  }
+});

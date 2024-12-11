@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { useFormContext } from "react-hook-form";
 import { MdError } from "react-icons/md";
 import { IMaskInput } from "react-imask";
@@ -6,6 +7,10 @@ import clsx from "clsx";
 import css from "./InputField.module.css";
 
 export default function InputField({ name, label, type = "text", placeholder, setValue, variant }) {
+  const location = useLocation();
+
+  const adjustedVariant = location.pathname === "/medicine" ? "registerModal" : variant;
+
   const {
     register,
     formState: { errors },
@@ -23,7 +28,7 @@ export default function InputField({ name, label, type = "text", placeholder, se
           placeholder={placeholder}
           {...register(name)}
           onAccept={(value) => setValue(name, value)}
-          className={`${css.inputField} ${errors[name] ? css.inputError : ""}`}
+          className={clsx(css.inputField, errors[name] && css.inputError, adjustedVariant && css[adjustedVariant])}
         />
       ) : (
         <input
@@ -31,7 +36,7 @@ export default function InputField({ name, label, type = "text", placeholder, se
           type={type || "text"}
           placeholder={placeholder}
           {...register(name)}
-          className={clsx(css.inputField, errors[name] && css.inputError, variant && css[variant])}
+          className={clsx(css.inputField, errors[name] && css.inputError, adjustedVariant && css[adjustedVariant])}
         />
       )}
       {errors[name] && (

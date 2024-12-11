@@ -3,13 +3,8 @@
   font-size: 12px;
   color: var(--placeholder);
   transition: color var(--animation);
-  margin-left: 67px;
 }
 
 .link:hover {
   color: var(--black);
-}
-
-.login {
-  margin-left: 95px;
 }

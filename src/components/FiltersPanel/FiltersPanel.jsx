@@ -30,6 +30,7 @@ export default function FiltersPanel() {
       name: data.keyword?.trim(),
       category: data.category,
       page: 1,
+      discount: "",
     };
 
     dispatch(changeFilterProducts(filterData));

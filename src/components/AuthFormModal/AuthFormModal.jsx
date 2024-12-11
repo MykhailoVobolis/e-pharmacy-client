@@ -6,14 +6,15 @@ import { signUpSchema, singInSchema } from "../../utils/validationSchemas.js";
 import { useDispatch } from "react-redux";
 import { logIn, register } from "../../redux/auth/operations.js";
 import { getUserCart } from "../../redux/cart/operations.js";
+import { closeModal, openModal } from "../../redux/modal/slice.js";
 
 import InputField from "../InputField/InputField.jsx";
 import FormButton from "../FormButton/FormButton.jsx";
-import AuthPrompt from "../AuthPrompt/AuthPrompt.jsx";
+import AuthPromptModal from "../AuthPromptModal/AuthPromptModal.jsx";
 
-import css from "./AuthForm.module.css";
+import css from "./AuthFormModal.module.css";
 
-export default function AuthForm({ link, authPromt, type, title }) {
+export default function AuthFormModal({ authPromt, type, title }) {
   const dispatch = useDispatch();
 
   const methods = useForm({
@@ -28,16 +29,21 @@ export default function AuthForm({ link, authPromt, type, title }) {
       .then((response) => {
         dispatch(getUserCart());
         methods.reset();
+        dispatch(closeModal());
       })
       .catch((error) => {
         toast.error(error.message);
       });
   };
 
+  const toggleButtonClick = () => {
+    type === "login" ? dispatch(openModal("register")) : dispatch(openModal("login"));
+  };
+
   return (
     <div className={clsx(css.wrapper, { [css.loginWrapper]: type === "login" })}>
       <FormProvider {...methods}>
-        <form className={css.form} onSubmit={methods.handleSubmit(onSubmit)}>
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
           <div className={clsx(css.imputContainer, { [css.loginInputContainer]: type === "login" })}>
             {type === "register" && <InputField name="name" label="Name" placeholder="User Name" />}
             <InputField variant={type} name="email" label="Email" type="email" placeholder="Email address" />
@@ -54,9 +60,9 @@ export default function AuthForm({ link, authPromt, type, title }) {
           </div>
           <div className={css.actionContainer}>
             <FormButton variant={type}>{title}</FormButton>
-            <AuthPrompt variant={type} link={link}>
+            <AuthPromptModal variant={type} onClick={toggleButtonClick}>
               {authPromt}
-            </AuthPrompt>
+            </AuthPromptModal>
           </div>
         </form>
       </FormProvider>

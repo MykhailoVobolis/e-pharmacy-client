@@ -4,9 +4,9 @@ import css from "./PromoBanners.module.css";
 
 export default function PromoBanners() {
   const bannersData = [
-    { href: "/medicline", number: 1, name: "Huge Sale", value: "70%", action: "Shop now" },
+    { href: "/medicine", number: 1, name: "Huge Sale", value: "70%", action: "Shop now" },
     { href: "/home", number: 2, name: "Secure delivery", value: "100%", action: "Read more" },
-    { href: "/medicline", number: 3, name: "Off", value: "35%", action: "Shop now" },
+    { href: "/medicine", number: 3, name: "Off", value: "35%", action: "Shop now" },
   ];
 
   return (

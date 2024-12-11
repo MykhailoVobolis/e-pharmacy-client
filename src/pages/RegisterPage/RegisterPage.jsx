@@ -1,8 +1,8 @@
 import MainLogo from "../../components/MainLogo/MainLogo.jsx";
 import MainContent from "../../components/MainContent/MainContent.jsx";
+import AuthForm from "../../components/AuthForm/AuthForm.jsx";
 
 import css from "./RegisterPage.module.css";
-import AuthForm from "../../components/AuthForm/AuthForm.jsx";
 
 export default function RegisterPage() {
   return (

@@ -77,8 +77,8 @@ export default function ProductsPagination() {
           // Стилізація тексту "..."
           "& .MuiPaginationItem-ellipsis": {
             color: "var(--black)",
-            border: "none",
-            padding: "6px 8px",
+            border: "solid 1px rgba(29, 30, 33, 0.05)",
+            padding: "9px 11px",
             margin: "0 5px",
             fontSize: isMobile ? "14px" : "18px",
             fontWeight: "700",
