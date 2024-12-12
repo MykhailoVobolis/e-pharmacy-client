@@ -4,7 +4,6 @@
   justify-content: center;
   border: none;
   border-radius: 100px;
-  padding: 13px 112px;
   width: 280px;
   height: 44px;
   background-color: var(--green);
@@ -31,4 +30,9 @@
   .login {
     width: 323px;
   }
+}
+
+/* Styles for cart page */
+.orderFormBtn {
+  width: 141px;
 }

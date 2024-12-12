@@ -9,7 +9,10 @@ import css from "./InputField.module.css";
 export default function InputField({ name, label, type = "text", placeholder, setValue, variant }) {
   const location = useLocation();
 
-  const adjustedVariant = location.pathname === "/medicine" ? "registerModal" : variant;
+  const adjustedVariant =
+    location.pathname === "/medicine" ? "registerModal" : location.pathname === "/cart" ? "cartPage" : variant;
+  const labelVariant = location.pathname === "/cart" ? "cartLabel" : "";
+  const errorMessageVariant = location.pathname === "/cart" ? "cartErrorMessage" : "";
 
   const {
     register,
@@ -18,7 +21,7 @@ export default function InputField({ name, label, type = "text", placeholder, se
 
   return (
     <div className={css.inputGroup}>
-      <label className={css.label} htmlFor={name}>
+      <label className={clsx(css.label, css[labelVariant])} htmlFor={name}>
         {label}
       </label>
       {type === "tel" ? (
@@ -40,7 +43,7 @@ export default function InputField({ name, label, type = "text", placeholder, se
         />
       )}
       {errors[name] && (
-        <p className={css.errorMessage}>
+        <p className={clsx(css.errorMessage, css[errorMessageVariant])}>
           <MdError size={16} /> {errors[name]?.message}
         </p>
       )}

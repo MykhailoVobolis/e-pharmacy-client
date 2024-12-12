@@ -1,5 +1,8 @@
 .inputGroup {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .label {
@@ -66,4 +69,26 @@
   .login {
     width: 323px;
   }
+}
+
+/* Styles for cart page */
+.cartPage {
+  width: 260px;
+}
+
+.cartLabel {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: unset;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-left: 18px;
+}
+
+.cartErrorMessage {
+  top: 70px;
 }

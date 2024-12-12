@@ -23,3 +23,15 @@ export const addProductsToCart = createAsyncThunk("cart/addProductToCart", async
     return thunkAPI.rejectWithValue({ status: error.response?.status, message: errorMessage });
   }
 });
+
+export const sendOrder = createAsyncThunk("cart/sendOrder", async (newOrder, thunkAPI) => {
+  try {
+    const response = await axios.post("/cart/checkout", {
+      orderDetails: newOrder,
+    });
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleError(error);
+    return thunkAPI.rejectWithValue({ status: error.response?.status, message: errorMessage });
+  }
+});

@@ -6,11 +6,22 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   height: 100%;
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.secondaryContainer {
+  display: flex;
+  gap: 96px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.14;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -19,7 +30,6 @@
   }
 
   .container {
-    gap: 98px;
     max-width: 628px;
   }
 }
@@ -30,8 +40,6 @@
   }
 
   .container {
-    flex-direction: row;
-    gap: 80px;
-    max-width: 1248px;
+    max-width: 1184px;
   }
 }

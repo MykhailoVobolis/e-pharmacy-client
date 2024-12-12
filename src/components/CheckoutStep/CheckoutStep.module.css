@@ -1,0 +1,17 @@
+.checkoutStepContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.stepName {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.stepDescription {
+  line-height: 1.25;
+  color: var(--description);
+}

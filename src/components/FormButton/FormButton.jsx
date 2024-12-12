@@ -5,7 +5,8 @@ import { useLocation } from "react-router-dom";
 export default function FormButton({ onSubmit, variant, children }) {
   const location = useLocation();
 
-  const adjustedVariant = location.pathname === "/medicine" ? "registerModal" : variant;
+  const adjustedVariant =
+    location.pathname === "/medicine" ? "registerModal" : location.pathname === "/cart" ? "orderFormBtn" : variant;
 
   return (
     <button className={clsx(css.formButton, css[adjustedVariant])} type="submit" onClick={onSubmit}>
