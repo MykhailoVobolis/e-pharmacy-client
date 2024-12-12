@@ -1,0 +1,26 @@
+.addInformationList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 8px 25px;
+  background-color: var(--green-disabled);
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  color: var(--green);
+}
+
+.active {
+  background-color: var(--green);
+  color: var(--white);
+}

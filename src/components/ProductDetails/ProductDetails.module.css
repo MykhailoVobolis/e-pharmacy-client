@@ -1,0 +1,6 @@
+.detailsContainer {
+  width: 800px;
+  background-color: var(--white);
+  border-radius: 27px;
+  padding: 40px 40px 66px 40px;
+}

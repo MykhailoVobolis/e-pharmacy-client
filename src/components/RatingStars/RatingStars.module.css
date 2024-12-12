@@ -1,0 +1,14 @@
+.starIcon {
+  fill: var(--yellow-star);
+}
+
+.starIconGrey {
+  fill: var(--text-white);
+}
+
+.starsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}

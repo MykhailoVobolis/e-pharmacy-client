@@ -1,0 +1,14 @@
+.description {
+  color: var(--description);
+  margin-bottom: 20px;
+}
+
+.descriptionItemName {
+  color: var(--description);
+}
+
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

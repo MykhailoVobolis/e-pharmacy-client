@@ -11,3 +11,5 @@ export const selectPage = (state) => state.products.products.page;
 export const selectHasNextPage = (state) => state.products.products.hasNextPage;
 
 export const selectHasPrevPage = (state) => state.products.products.hasPreviousPage;
+
+export const selectCurentProduct = (state) => state.products.curentProduct;

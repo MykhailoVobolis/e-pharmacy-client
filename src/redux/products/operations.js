@@ -25,3 +25,14 @@ export const fetchProductsCategories = createAsyncThunk("products/fetchProductsC
     return thunkAPI.rejectWithValue({ message: errorMessage });
   }
 });
+
+export const fetchProductById = createAsyncThunk("products/fetchProductById", async (productId, thunkAPI) => {
+  try {
+    const response = await axios.get(`/products/${productId}`);
+
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleError(error);
+    return thunkAPI.rejectWithValue({ message: errorMessage });
+  }
+});

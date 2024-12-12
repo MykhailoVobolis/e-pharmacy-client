@@ -83,3 +83,31 @@
   font-size: 12px;
   color: var(--black);
 }
+
+/* ProductOverview styles*/
+
+.productOverviewContainer {
+  width: 364px;
+  gap: 20px;
+}
+
+.imageWrapperOverview {
+  width: 364px;
+  height: 337px;
+}
+
+.nameContainerOverview {
+  margin-bottom: 40px;
+}
+
+.nameOverview,
+.priceOverview {
+  font-size: 20px;
+}
+
+.addButtonOverview {
+  width: 140px;
+  height: 44px;
+  font-weight: 500;
+  line-height: 1.29;
+}

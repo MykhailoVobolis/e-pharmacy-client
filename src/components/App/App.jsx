@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import CustomLoader from "../CustomLoader/CustomLoader.jsx";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,6 +20,8 @@ const CartPage = lazy(() => import("../../pages/CartPage/CartPage.jsx"));
 const MedicineStorePage = lazy(() => import("../../pages/MedicineStorePage/MedicineStorePage.jsx"));
 const MedicinePage = lazy(() => import("../../pages/MedicinePage/MedicinePage.jsx"));
 const ProductPage = lazy(() => import("../../pages/ProductPage/ProductPage.jsx"));
+const Description = lazy(() => import("../Description/Description.jsx"));
+const Reviews = lazy(() => import("../Reviews/Reviews.jsx"));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -47,7 +49,11 @@ export default function App() {
           <Route path="cart" element={<PrivateRoute component={<CartPage />} redirectTo="/login" />} />
           <Route path="medicine-store" element={<MedicineStorePage />} />
           <Route path="medicine" element={<MedicinePage />} />
-          <Route path="product" element={<ProductPage />} />
+          <Route path="product/:productId" element={<ProductPage />}>
+            <Route index element={<Navigate to="description" replace />} />
+            <Route path="description" element={<Description />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
