@@ -1,20 +1,20 @@
 [
   {
-    "reviewer_avatar": "/public/avatarImages/product-review-1.png",
+    "reviewer_avatar": "/avatarImages/product-review-1.png",
     "reviewer_name": "Leroy Jenkins",
     "reviewer_rating": 4,
     "timeAgo": "2 days ago",
     "comment": "I've been using Moringa powder in my smoothies for a few weeks now. My energy levels are up, and I feel great. I followed the recommended dosage, and it seems to be a perfect addition to my daily routine. Highly recommend!"
   },
   {
-    "reviewer_avatar": "/public/avatarImages/product-review-2.png",
+    "reviewer_avatar": "/avatarImages/product-review-2.png",
     "reviewer_name": "Leroy Jenkins",
     "reviewer_rating": 5,
     "timeAgo": "2 days ago",
     "comment": "I tried Moringa capsules as part of my wellness regimen, and I've been pleasantly surprised by the results. My skin looks healthier, and I've noticed an improvement in my digestion. A natural and effective supplement!"
   },
   {
-    "reviewer_avatar": "/public/avatarImages/product-review-3.png",
+    "reviewer_avatar": "/avatarImages/product-review-3.png",
     "reviewer_name": "Leroy Jenkins",
     "reviewer_rating": 3,
     "timeAgo": "2 days ago",
