@@ -1,13 +1,13 @@
 import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import CustomLoader from "../CustomLoader/CustomLoader.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsRefreshing } from "../../redux/auth/selectors.js";
 import { refreshUser } from "../../redux/auth/operations.js";
 import { finishAuthProcess } from "../../redux/auth/slice.js";
 import { getUserCart } from "../../redux/cart/operations.js";
 
+import CustomLoader from "../CustomLoader/CustomLoader.jsx";
 import RestrictedRoute from "../RestrictedRoute.jsx";
 import PrivateRoute from "../PrivateRoute.jsx";
 
@@ -45,6 +45,8 @@ export default function App() {
         <Route path="/register" element={<RestrictedRoute component={<RegisterPage />} redirectTo="/home" />} />
         <Route path="/login" element={<RestrictedRoute component={<LoginPage />} redirectTo="/home" />} />
         <Route path="/" element={<Layout />}>
+          {/* Перенаправлення з кореневого шляху на /home */}
+          <Route index element={<Navigate to="/home" replace />} />
           <Route path="home" element={<HomePage />} />
           <Route path="cart" element={<PrivateRoute component={<CartPage />} redirectTo="/login" />} />
           <Route path="medicine-store" element={<MedicineStorePage />} />
