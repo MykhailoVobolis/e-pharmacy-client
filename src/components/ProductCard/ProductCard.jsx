@@ -26,14 +26,12 @@ export default function ProductCard({ product }) {
 
   const productExists = isLoggedin && productsCart && productsCart.some((product) => product._id === _id);
 
-  const handleDecrease = () => {
-    if (quantity > 1) {
+  const handleQuantityChange = (type) => {
+    if (type === "decrease" && quantity > 1) {
       setQuantity(quantity - 1);
+    } else if (type === "increase") {
+      setQuantity(quantity + 1);
     }
-  };
-
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
   };
 
   const handleClick = () => {
@@ -85,8 +83,7 @@ export default function ProductCard({ product }) {
           {isProductOverview && (
             <QuantitySelector
               quantity={quantity}
-              onDecrease={handleDecrease}
-              onIncrease={handleIncrease}
+              handleQuantityChange={handleQuantityChange}
               productExists={productExists}
               isProductOverview={isProductOverview}
             />

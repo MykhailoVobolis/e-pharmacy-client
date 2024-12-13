@@ -24,6 +24,18 @@ export const addProductsToCart = createAsyncThunk("cart/addProductToCart", async
   }
 });
 
+export const deleteProductCart = createAsyncThunk("cart/deleteProductCart", async (id, thunkAPI) => {
+  try {
+    const response = await axios.delete("/cart/product/delete", {
+      data: { productId: id }, // Передаємо body через ключ `data`, це правильний спосіб передавати body у axios.delete.
+    });
+    return response.data;
+  } catch (error) {
+    const errorMessage = handleError(error);
+    return thunkAPI.rejectWithValue({ status: error.response?.status, message: errorMessage });
+  }
+});
+
 export const sendOrder = createAsyncThunk("cart/sendOrder", async (newOrder, thunkAPI) => {
   try {
     const response = await axios.post("/cart/checkout", {
