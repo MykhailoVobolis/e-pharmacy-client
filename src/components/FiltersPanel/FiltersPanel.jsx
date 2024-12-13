@@ -15,14 +15,15 @@ export default function FiltersPanel() {
   const categories = useSelector(selectProductsCategories);
 
   const filterParams = useSelector(selectFilterProducts);
-  const { category: categoryValue } = filterParams;
+  const { category: categoryValue, name: keywordValue } = filterParams;
 
   const methods = useForm({
     defaultValues: {
-      keyword: "",
-      category: "",
+      keyword: keywordValue || "",
+      category: categoryValue || "",
     },
   });
+
   const { handleSubmit } = methods;
 
   const onSubmit = (data) => {
