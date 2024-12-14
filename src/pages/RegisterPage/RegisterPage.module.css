@@ -1,11 +1,12 @@
 .pageContainer {
   margin-left: auto;
   margin-right: auto;
+  padding: 25px 20px 191px 20px;
   height: 100vh;
   background-image: url(/src/assets/images/elements.png);
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
-  background-size: 279px 257px;
+  background-size: 195px 180px;
 }
 
 @media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-devide-pixel-ratio: 2) {
@@ -18,18 +19,19 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 375px;
+  max-width: 335px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 50px;
 }
 
 @media screen and (min-width: 768px) {
   .pageContainer {
-    padding: 116px 0 106px 0;
+    padding: 28px 32px 250px 32px;
   }
 
   .container {
-    max-width: 628px;
+    max-width: 704px;
   }
 }
 
@@ -37,6 +39,7 @@
   .pageContainer {
     padding: 28px 100px 262px 100px;
     max-width: 1440px;
+    background-size: 279px 257px;
   }
 
   .container {

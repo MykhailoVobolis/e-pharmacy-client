@@ -29,6 +29,11 @@
   transition: border-color var(--animation);
 }
 
+.inputFieldRegisterMobile,
+.inputFieldLoginMobile {
+  width: 335px;
+}
+
 .registerModal,
 .login {
   max-width: 100%;
@@ -67,6 +72,14 @@
 
   .registerModal,
   .login {
+    width: 323px;
+  }
+
+  .inputFieldRegisterMobile {
+    width: 279px;
+  }
+
+  .inputFieldLoginMobile {
     width: 323px;
   }
 }

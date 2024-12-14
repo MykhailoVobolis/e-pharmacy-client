@@ -10,7 +10,15 @@ export default function InputField({ name, label, type = "text", placeholder, se
   const location = useLocation();
 
   const adjustedVariant =
-    location.pathname === "/medicine" ? "registerModal" : location.pathname === "/cart" ? "cartPage" : variant;
+    location.pathname === "/medicine"
+      ? "registerModal"
+      : location.pathname === "/cart"
+      ? "cartPage"
+      : location.pathname === "/register"
+      ? "inputFieldRegisterMobile"
+      : location.pathname === "/login"
+      ? "inputFieldLoginMobile"
+      : variant;
   const labelVariant = location.pathname === "/cart" ? "cartLabel" : "";
   const errorMessageVariant = location.pathname === "/cart" ? "cartErrorMessage" : "";
 

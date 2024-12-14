@@ -1,10 +1,10 @@
 .mainContainer {
-  width: 614px;
-  padding-top: 104px;
+  width: 100%;
+  padding-top: 56px;
   background-image: url(/src/assets/images/pill.png);
   background-repeat: no-repeat;
-  background-position: top 0px right 19px;
-  background-size: 179px 175px;
+  background-position: top 0px right 20px;
+  background-size: 95px 93px;
 }
 
 @media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-devide-pixel-ratio: 2) {
@@ -15,10 +15,68 @@
 
 .title {
   font-weight: 600;
-  font-size: 54px;
-  line-height: 1.11;
+  font-size: 28px;
+  line-height: 1.21;
 }
 
 .accent {
   color: var(--green);
+}
+
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    width: 614px;
+    padding-top: 104px;
+    background-image: url(/src/assets/images/pill.png);
+    background-repeat: no-repeat;
+    background-position: top 0px right 19px;
+    background-size: 179px 175px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-devide-pixel-ratio: 2) {
+    .mainContainer {
+      background-image: url(/src/assets/images/pill@2x.png);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 1.11;
+  }
+
+  .accent {
+    color: var(--green);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mainContainer {
+    width: 614px;
+    padding-top: 104px;
+    background-image: url(/src/assets/images/pill.png);
+    background-repeat: no-repeat;
+    background-position: top 0px right 19px;
+    background-size: 179px 175px;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-devide-pixel-ratio: 2) {
+    .mainContainer {
+      background-image: url(/src/assets/images/pill@2x.png);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 1.11;
+  }
+
+  .accent {
+    color: var(--green);
+  }
 }
