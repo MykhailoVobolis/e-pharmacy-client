@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import { useMedia } from "react-use";
 import { useLocation } from "react-router-dom";
-import clsx from "clsx";
 import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors.js";
 
@@ -22,11 +22,13 @@ export default function AppBar() {
     <header className={clsx(css.header, { [css.green]: isHome })}>
       <div className={css.navContainer}>
         <Navigation />
-        {isDesktop && isLoggedIn ? (
-          <UserMenu variant={isHome && "white"} />
-        ) : (
-          <AuthNav variantRegister={isHome && "whiteRegister"} variantLogin={isHome && "whiteLogin"} />
-        )}
+        {isDesktop ? (
+          isLoggedIn ? (
+            <UserMenu variant={isHome && "white"} />
+          ) : (
+            <AuthNav variantRegister={isHome && "whiteRegister"} variantLogin={isHome && "whiteLogin"} />
+          )
+        ) : null}
       </div>
     </header>
   );

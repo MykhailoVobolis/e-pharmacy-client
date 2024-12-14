@@ -1,13 +1,16 @@
 .legalList {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 49px;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 21px;
+  row-gap: 10px;
 }
 
 .legalItem {
-  font-size: 14px;
-  line-height: 1.29;
+  font-size: 10px;
+  line-height: 1;
   color: var(--background);
   position: relative;
 }
@@ -15,11 +18,67 @@
 .legalItem:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -24px;
+  right: -10px;
   bottom: -1px;
   width: 1px;
-  height: 20px;
+  height: 10px;
   border-radius: 100px;
   background-color: var(--background);
   opacity: 0.2;
+}
+
+@media screen and (min-width: 768px) {
+  .legalList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 49px;
+  }
+
+  .legalItem {
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--background);
+    position: relative;
+  }
+
+  .legalItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -24px;
+    bottom: -1px;
+    width: 1px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--background);
+    opacity: 0.2;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .legalList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 49px;
+  }
+
+  .legalItem {
+    font-size: 14px;
+    line-height: 1.29;
+    color: var(--background);
+    position: relative;
+  }
+
+  .legalItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -24px;
+    bottom: -1px;
+    width: 1px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--background);
+    opacity: 0.2;
+  }
 }

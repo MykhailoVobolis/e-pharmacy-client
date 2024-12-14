@@ -1,19 +1,30 @@
 .navigation {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 190px;
+  max-width: 268px;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .navigation {
-    max-width: 478px;
+    max-width: 704px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .navigation {
     max-width: 758px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
 }

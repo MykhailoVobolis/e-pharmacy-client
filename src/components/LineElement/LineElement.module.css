@@ -1,5 +1,17 @@
 .lineElement {
   height: 1px;
   background-color: var(--elements-grey);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .lineElement {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .lineElement {
+    margin-bottom: 40px;
+  }
 }

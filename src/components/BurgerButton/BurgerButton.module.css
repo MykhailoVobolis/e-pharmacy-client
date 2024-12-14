@@ -1,0 +1,17 @@
+.burgerBtn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+.burgerIcon {
+  fill: var(--white);
+  width: 32px;
+  height: 26px;
+}
+
+.greenBurgerIcon {
+  fill: var(--green);
+}

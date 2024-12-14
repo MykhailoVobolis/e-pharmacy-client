@@ -15,7 +15,7 @@ export default function FeaturesList() {
     <ul className={css.featureContainer}>
       {features.map((feature, index) => (
         <li className={css.featureItem} key={index}>
-          <HiOutlineLightningBolt className={css.featureIcon} size={22} />
+          <HiOutlineLightningBolt className={css.featureIcon} />
           {feature}
         </li>
       ))}

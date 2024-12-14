@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { useMedia } from "react-use";
+
+import FeaturesList from "../FeaturesList/FeaturesList.jsx";
+
 import css from "./AddPharmacyPromo.module.css";
 
 import mainImageMobile from "../../assets/images/mobile/main-Image-mobile.png";
 import mainImageMobile2x from "../../assets/images/mobile/main-Image-mobile@2x.png";
 import mainImage from "../../assets/images/main-image.png";
 import mainImage2x from "../../assets/images/main-image@2x.png";
-import FeaturesList from "../FeaturesList/FeaturesList.jsx";
 
 export default function AddPharmacyPromo() {
   const isTablet = useMedia("(min-width: 768px)");

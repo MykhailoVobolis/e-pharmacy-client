@@ -1,5 +1,4 @@
 .footerSection {
-  /* height: 328px; */
   padding: 40px 0;
   background-color: var(--green);
 }
@@ -7,27 +6,69 @@
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 375px;
+  max-width: 335px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footerNavBar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
+  .footerSection {
+    padding: 40px 0;
+    background-color: var(--green);
+  }
+
   .container {
-    max-width: 628px;
+    display: flex;
+    flex-direction: column;
+    max-width: 704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerNavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 0px;
+  }
+
+  .isTabletContainer {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .footerSection {
+    padding: 40px 0;
+    background-color: var(--green);
+  }
+
   .container {
+    display: flex;
+    flex-direction: column;
     max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

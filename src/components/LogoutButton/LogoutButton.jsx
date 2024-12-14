@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import { useDispatch } from "react-redux";
 import { logOut } from "../../redux/auth/operations.js";
-// import { closeModalMobile } from "../../redux/modal/slice.js";
+import { closeModalMobile } from "../../redux/modal/slice.js";
 
 import css from "./LogoutButton.module.css";
 
@@ -11,7 +11,7 @@ export default function LogoutButton({ variant }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    // dispatch(closeModalMobile());
+    dispatch(closeModalMobile());
     dispatch(logOut())
       .unwrap()
       .catch((error) => {

@@ -1,6 +1,26 @@
 .description {
-  width: 311px;
-  line-height: 1.25;
+  width: 261px;
+  font-size: 14px;
+  line-height: 1.28571;
   color: var(--background);
-  margin-bottom: 64px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    width: 311px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--background);
+    margin-bottom: 88px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .description {
+    width: 311px;
+    line-height: 1.25;
+    color: var(--background);
+    margin-bottom: 64px;
+  }
 }

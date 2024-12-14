@@ -4,7 +4,7 @@
   background-color: var(--background-card-green);
   border: 1.15px solid var(--text-white);
   border-radius: 27px;
-  padding: 40px 40px 46px 40px;
+  padding: 32px 32px 40px 32px;
   position: relative;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@
 }
 
 .name {
-  max-width: 180px;
+  max-width: 160px;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.4;
@@ -40,4 +40,96 @@
   right: -115px;
   box-shadow: -58px 50px 0 var(--background-rectangle-green),
     /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+}
+
+@media screen and (min-width: 768px) {
+  .storeContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card-green);
+    border: 1.15px solid var(--text-white);
+    border-radius: 27px;
+    padding: 40px 40px 46px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .aboutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+
+  .name {
+    max-width: 180px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Декоративні псевдоелементи */
+
+  .storeContainer::before {
+    content: "";
+    position: absolute;
+    background: var(--background-rectangle-green);
+    border-radius: 20px 0 0 20px;
+    width: 198px;
+    height: 42px;
+    transform: rotate(22deg);
+    bottom: 42px;
+    right: -115px;
+    box-shadow: -58px 50px 0 var(--background-rectangle-green),
+      /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .storeContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card-green);
+    border: 1.15px solid var(--text-white);
+    border-radius: 27px;
+    padding: 40px 40px 46px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .aboutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+
+  .name {
+    max-width: 180px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Декоративні псевдоелементи */
+
+  .storeContainer::before {
+    content: "";
+    position: absolute;
+    background: var(--background-rectangle-green);
+    border-radius: 20px 0 0 20px;
+    width: 198px;
+    height: 42px;
+    transform: rotate(22deg);
+    bottom: 42px;
+    right: -115px;
+    box-shadow: -58px 50px 0 var(--background-rectangle-green),
+      /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+  }
 }

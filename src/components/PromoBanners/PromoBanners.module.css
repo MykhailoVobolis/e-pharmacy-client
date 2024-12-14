@@ -1,12 +1,14 @@
 .promoSection {
-  padding-top: 64px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .bannersList {
   display: flex;
-  gap: 28px;
+  flex-direction: column;
+  gap: 16px;
   justify-content: center;
+  align-items: center;
 }
 
 .bannerItem {
@@ -16,7 +18,62 @@
   padding: 14px 18px;
   border: solid 1.15px var(--text-white);
   border-radius: 27px;
-  width: 321px;
+  width: 335px;
   box-shadow: 0 -1px 14px 0 rgba(29, 30, 33, 0.02);
   background-color: var(--background-card-white);
+}
+
+@media screen and (min-width: 768px) {
+  .promoSection {
+    padding-top: 64px;
+    padding-bottom: 60px;
+  }
+
+  .bannersList {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 28px;
+    justify-content: start;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .bannerItem {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 18px;
+    border: solid 1.15px var(--text-white);
+    border-radius: 27px;
+    width: 321px;
+    box-shadow: 0 -1px 14px 0 rgba(29, 30, 33, 0.02);
+    background-color: var(--background-card-white);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .promoSection {
+    padding-top: 64px;
+    padding-bottom: 60px;
+  }
+
+  .bannersList {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .bannerItem {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 18px;
+    border: solid 1.15px var(--text-white);
+    border-radius: 27px;
+    width: 321px;
+    box-shadow: 0 -1px 14px 0 rgba(29, 30, 33, 0.02);
+    background-color: var(--background-card-white);
+  }
 }
