@@ -1,6 +1,6 @@
 # E-Pharmacy
 
-**Жива сторінка** - перегляньте робочу версію проєкту: [E-Pharmacy](https://top-e-pharmacy.vercel.app/)
+[**Жива сторінка**](https://top-e-pharmacy.vercel.app/) - перегляньте робочу версію проєкту.
 
 ## Огляд
 

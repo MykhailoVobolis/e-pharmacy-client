@@ -1,12 +1,12 @@
 # E-Pharmacy
 
-**Live Page** - Check out the working version of the project: [E-Pharmacy](https://top-e-pharmacy.vercel.app/)
+[**Live Page**](https://top-e-pharmacy.vercel.app/) - Check out the working version of the project.
 
 ## Overview
 
 **E-Pharmacy** is a web platform for online pharmacies that allows users to order medications online with delivery. The platform offers a convenient interface for registration, login, browsing products, and making purchases.
 
-## Key Sections
+## Main sections
 
 **Home Page**:  
 The main screen where users can explore offers and browse products.
