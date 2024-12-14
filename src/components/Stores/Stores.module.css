@@ -10,13 +10,17 @@
   gap: 20px;
 }
 
+.storeItem {
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .storesContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     column-gap: 16px;
     row-gap: 32px;
   }
@@ -41,7 +45,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     column-gap: 20px;
     row-gap: 40px;
   }

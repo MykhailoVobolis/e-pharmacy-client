@@ -5,8 +5,9 @@ import { selectIsLoggedIn } from "../../redux/auth/selectors.js";
 import { addProductsToCart } from "../../redux/cart/operations.js";
 import { selectCartProducts } from "../../redux/cart/selectors.js";
 import { openModal } from "../../redux/modal/slice.js";
-import QuantitySelector from "../QuantitySelector/QuantitySelector.jsx";
 import { useState } from "react";
+
+import QuantitySelector from "../QuantitySelector/QuantitySelector.jsx";
 
 import css from "./ProductCard.module.css";
 
@@ -68,7 +69,7 @@ export default function ProductCard({ product }) {
         })}>
         <img className={css.imageProduct} src={photo} width={"100%"} height={"100%"} alt={`${name} image`} />
       </div>
-      <div className={css.productInfoContainer}>
+      <div className={clsx(css.productInfoContainer, { [css.productInfoContainerOverview]: isProductOverview })}>
         <div
           className={clsx(css.nameContainer, {
             [css.nameContainerOverview]: isProductOverview,

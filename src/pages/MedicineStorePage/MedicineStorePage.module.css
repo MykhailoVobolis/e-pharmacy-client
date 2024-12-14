@@ -1,13 +1,13 @@
 .pageContainer {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 70px;
-  padding-bottom: 120px;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .container {
   height: 100%;
-  max-width: 375px;
+  max-width: 335px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -23,10 +23,20 @@
   .container {
     max-width: 704px;
   }
+
+  .pageContainer {
+    padding-top: 70px;
+    padding-bottom: 120px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1185px;
+  }
+
+  .pageContainer {
+    padding-top: 70px;
+    padding-bottom: 120px;
   }
 }

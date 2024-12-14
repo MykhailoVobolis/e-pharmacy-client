@@ -1,6 +1,35 @@
 .productsContainer {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  column-gap: 21px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productsItem {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .productsContainer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 32px;
+    column-gap: 13px;
+  }
+
+  .productsItem {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 21px;
+  }
+
+  .productsItem {
+    width: 280px;
+  }
 }

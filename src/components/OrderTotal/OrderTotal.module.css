@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px;
+  padding: 14px 18px;
   border-radius: 8px;
   background-color: var(--background-card-green);
   margin-bottom: 20px;
@@ -11,6 +11,44 @@
 
 .orderTotalContainer p {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+  .orderTotalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background-card-green);
+    margin-bottom: 20px;
+  }
+
+  .orderTotalContainer p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .orderTotalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background-card-green);
+    margin-bottom: 20px;
+  }
+
+  .orderTotalContainer p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+  }
 }

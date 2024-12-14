@@ -65,28 +65,9 @@
   border-color: var(--red);
 }
 
-@media screen and (min-width: 768px) {
-  .errorMessage {
-    font-size: 10px;
-  }
-
-  .registerModal,
-  .login {
-    width: 323px;
-  }
-
-  .inputFieldRegisterMobile {
-    width: 279px;
-  }
-
-  .inputFieldLoginMobile {
-    width: 323px;
-  }
-}
-
 /* Styles for cart page */
 .cartPage {
-  width: 260px;
+  width: 295px;
 }
 
 .cartLabel {
@@ -104,4 +85,45 @@
 
 .cartErrorMessage {
   top: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .errorMessage {
+    font-size: 10px;
+  }
+
+  .registerModal,
+  .login {
+    width: 323px;
+  }
+
+  .inputFieldRegisterMobile {
+    width: 279px;
+  }
+
+  .inputFieldLoginMobile {
+    width: 323px;
+  }
+
+  /* Styles for cart page */
+  .cartPage {
+    width: 260px;
+  }
+
+  .cartLabel {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: unset;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    margin-left: 18px;
+  }
+
+  .cartErrorMessage {
+    top: 70px;
+  }
 }

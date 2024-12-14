@@ -7,11 +7,11 @@ import { useMedia } from "react-use";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTotalPages } from "../../redux/products/selectors.js";
 import { changeProductPage } from "../../redux/filters/slice.js";
+import { selectFilterProducts } from "../../redux/filters/selectors.js";
 
 import Pagination from "@mui/material/Pagination";
 
 import css from "./ProductsPagination.module.css";
-import { selectFilterProducts } from "../../redux/filters/selectors.js";
 
 export default function ProductsPagination() {
   const dispatch = useDispatch();

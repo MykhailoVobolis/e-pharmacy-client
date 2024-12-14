@@ -14,7 +14,7 @@
 }
 
 .searchInputField {
-  width: 224px;
+  width: 100%;
   padding: 13px 18px;
   border: 1px solid rgba(29, 30, 33, 0.1);
   background-color: var(--white);
@@ -44,4 +44,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .searchInputField {
+    width: 224px;
+    padding: 13px 18px;
+    border: 1px solid rgba(29, 30, 33, 0.1);
+    background-color: var(--white);
+    border-radius: 100px;
+    outline: transparent;
+    outline-offset: 4px;
+    font-size: 12px;
+    color: var(--black);
+    line-height: 1.5;
+    transition: border-color var(--animation);
+  }
 }

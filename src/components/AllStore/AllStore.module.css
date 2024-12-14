@@ -4,7 +4,7 @@
   background-color: var(--background-card-green);
   border: 1.15px solid var(--text-white);
   border-radius: 27px;
-  padding: 40px 40px 40px 40px;
+  padding: 32px;
   position: relative;
   overflow: hidden;
 }
@@ -13,12 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 36px;
+  margin-top: 20px;
 }
 
 .name {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.4;
   margin-bottom: 20px;
 }
@@ -57,4 +57,132 @@
   right: -100px;
   box-shadow: -58px 50px 0 var(--background-rectangle-green),
     /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+}
+
+@media screen and (min-width: 768px) {
+  .storeContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card-green);
+    border: 1.15px solid var(--text-white);
+    border-radius: 27px;
+    padding: 40px 40px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 36px;
+    max-width: 704px;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 102px;
+    height: 34px;
+    border-radius: 100px;
+    background-color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--white);
+    transition: background-color var(--animation);
+  }
+
+  .link:hover {
+    background-color: var(--green-hover);
+  }
+
+  /* Декоративні псевдоелементи */
+
+  .storeContainer::before {
+    content: "";
+    position: absolute;
+    background: var(--background-rectangle-green);
+    border-radius: 20px 0 0 20px;
+    width: 198px;
+    height: 42px;
+    transform: rotate(22deg);
+    bottom: 230px;
+    right: -100px;
+    box-shadow: -58px 50px 0 var(--background-rectangle-green),
+      /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .storeContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-card-green);
+    border: 1.15px solid var(--text-white);
+    border-radius: 27px;
+    padding: 40px 40px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 36px;
+    max-width: 1248px;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 102px;
+    height: 34px;
+    border-radius: 100px;
+    background-color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--white);
+    transition: background-color var(--animation);
+  }
+
+  .link:hover {
+    background-color: var(--green-hover);
+  }
+
+  /* Декоративні псевдоелементи */
+
+  .storeContainer::before {
+    content: "";
+    position: absolute;
+    background: var(--background-rectangle-green);
+    border-radius: 20px 0 0 20px;
+    width: 198px;
+    height: 42px;
+    transform: rotate(22deg);
+    bottom: 230px;
+    right: -100px;
+    box-shadow: -58px 50px 0 var(--background-rectangle-green),
+      /* Другий елемент */ -30px 100px 0 var(--background-rectangle-green); /* Третій елемент */
+  }
 }

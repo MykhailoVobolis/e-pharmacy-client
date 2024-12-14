@@ -1,20 +1,23 @@
 .pageContainer {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 375px;
+  max-width: 335px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .secondaryContainer {
   display: flex;
-  gap: 96px;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .title {
@@ -27,19 +30,57 @@
 @media screen and (min-width: 768px) {
   .pageContainer {
     padding: 116px 0 106px 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .container {
-    max-width: 628px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .secondaryContainer {
+    gap: 64px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.14;
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .pageContainer {
-    padding-top: 44px;
+    padding: 72px 0 120px 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .secondaryContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 96px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.14;
+    margin-bottom: 40px;
   }
 }
