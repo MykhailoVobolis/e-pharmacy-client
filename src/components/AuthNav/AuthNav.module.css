@@ -17,21 +17,50 @@
   border-radius: 100px;
   width: 119px;
   height: 46px;
+  transition: color var(--animation), background-color var(--animation);
+}
+
+.registerLink:hover {
+  color: var(--white);
+  background-color: var(--green);
 }
 
 .loginLink {
   font-size: 14px;
   line-height: 1;
   color: var(--green);
+  transition: color var(--animation);
+}
+
+.loginLink:hover {
+  color: var(--green-hover);
 }
 
 .whiteRegister {
   color: var(--text-white);
   border: 1px solid var(--button-border-white);
+  transition: color var(--animation), border-color var(--animation);
+}
+
+.whiteRegister:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 .whiteLogin {
   color: var(--text-white);
+  transition: color var(--animation);
+}
+
+.whiteLogin:hover {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .authContainer {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 1440px) {

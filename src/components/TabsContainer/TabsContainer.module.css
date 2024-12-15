@@ -18,6 +18,12 @@
   font-size: 14px;
   letter-spacing: -0.05em;
   color: var(--green);
+  transition: color var(--animation), background-color var(--animation);
+}
+
+.default:hover {
+  color: var(--white);
+  background-color: var(--green);
 }
 
 .active {

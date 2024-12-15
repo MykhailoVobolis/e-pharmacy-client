@@ -46,6 +46,11 @@
   line-height: 1.4;
   color: #93939a;
   margin-bottom: 6px;
+  transition: color var(--animation);
+}
+
+.link:hover {
+  color: var(--black);
 }
 
 @media screen and (min-width: 768px) {

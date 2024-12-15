@@ -37,5 +37,7 @@
 @media screen and (min-width: 768px) {
   .mobileMenu {
     width: 334px;
+    padding-top: 350px;
+    padding-bottom: 64px;
   }
 }
