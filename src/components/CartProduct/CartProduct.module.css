@@ -87,6 +87,11 @@
   color: var(--white);
 }
 
+.productLink {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media screen and (min-width: 768px) {
   .cartProductContainer {
     display: flex;

@@ -5,6 +5,7 @@ import { addProductsToCart, deleteProductCart } from "../../redux/cart/operation
 import QuantitySelector from "../QuantitySelector/QuantitySelector.jsx";
 
 import css from "./CartProduct.module.css";
+import { Link } from "react-router-dom";
 
 export default function CartProduct({ product }) {
   const dispatch = useDispatch();
@@ -42,12 +43,16 @@ export default function CartProduct({ product }) {
   return (
     <div className={css.cartProductContainer}>
       <div className={css.imageWrapper}>
-        <img className={css.imageProduct} src={photo} width={"100%"} height={"100%"} alt={`${name} image`} />
+        <Link to={`/product/${_id}`} className={css.productLink}>
+          <img className={css.imageProduct} src={photo} width={"100%"} height={"100%"} alt={`${name} image`} />
+        </Link>
       </div>
       <div className={css.productInfoContainer}>
         <div className={css.nameContainer}>
           <div className={css.titleContainer}>
-            <h3 className={css.name}>{name}</h3>
+            <Link to={`/product/${_id}`} className={css.productLink}>
+              <h3 className={css.name}>{name}</h3>
+            </Link>
             <p className={css.category}>{category}</p>
           </div>
           <p className={css.price}>&#x09F3;{price}</p>
