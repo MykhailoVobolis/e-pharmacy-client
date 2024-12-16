@@ -22,6 +22,12 @@
   font-size: 14px;
   line-height: 1.29;
   color: var(--text-grey);
+  transition: color var(--animation);
+}
+
+.address:hover,
+.phone:hover {
+  color: var(--black);
 }
 
 .phoneWrapper {

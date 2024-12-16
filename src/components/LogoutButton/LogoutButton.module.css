@@ -12,11 +12,23 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
+  transition: color var(--animation), background-color var(--animation);
+}
+
+.logoutBtn:hover {
+  color: var(--white);
+  background-color: var(--green);
 }
 
 .white {
   border: 1px solid var(--button-border-white);
   color: var(--text-white);
+  transition: color var(--animation), border-color var(--animation);
+}
+
+.white:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 @media screen and (min-width: 1440px) {
