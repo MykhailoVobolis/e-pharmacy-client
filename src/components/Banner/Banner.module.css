@@ -54,105 +54,24 @@
 }
 
 @media screen and (min-width: 768px) {
-  .bannerNameContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
   .bannerNumber {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 74px;
     height: 74px;
-    border-radius: 100px;
-    background-color: rgba(231, 241, 237, 0.4);
   }
 
   .bannerNumberValue {
     font-size: 28px;
-    line-height: 1;
-    color: var(--green);
   }
 
   .bannerName {
-    font-weight: 500;
     font-size: 20px;
-    line-height: 1.4;
-    color: var(--banner-text);
   }
 
   .linkContainer {
-    display: flex;
-    align-items: end;
     gap: 28px;
   }
 
   .value {
-    font-weight: 500;
     font-size: 36px;
-    line-height: 1.4;
-    color: var(--banner-text);
-  }
-
-  .link {
-    text-decoration: none;
-    font-size: 13px;
-    line-height: 1.4;
-    color: #93939a;
-    margin-bottom: 6px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .bannerNameContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .bannerNumber {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 74px;
-    height: 74px;
-    border-radius: 100px;
-    background-color: rgba(231, 241, 237, 0.4);
-  }
-
-  .bannerNumberValue {
-    font-size: 28px;
-    line-height: 1;
-    color: var(--green);
-  }
-
-  .bannerName {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.4;
-    color: var(--banner-text);
-  }
-
-  .linkContainer {
-    display: flex;
-    align-items: end;
-    gap: 28px;
-  }
-
-  .value {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 1.4;
-    color: var(--banner-text);
-  }
-
-  .link {
-    text-decoration: none;
-    font-size: 13px;
-    line-height: 1.4;
-    color: #93939a;
-    margin-bottom: 6px;
   }
 }

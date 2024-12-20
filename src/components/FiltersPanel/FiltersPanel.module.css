@@ -35,76 +35,14 @@
 
 @media screen and (min-width: 768px) {
   .searchForm {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 40px;
     gap: 8px;
   }
 
   .inputContainer {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 14px;
-  }
-
-  .submitButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border: none;
-    border-radius: 100px;
-    width: 116px;
-    height: 44px;
-    background-color: var(--green);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    color: var(--white);
-    transition: background-color var(--animation);
-  }
-
-  .submitButton:hover {
-    background-color: var(--green-hover);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .searchForm {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    gap: 8px;
-  }
-
-  .inputContainer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .submitButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border: none;
-    border-radius: 100px;
-    width: 116px;
-    height: 44px;
-    background-color: var(--green);
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.29;
-    color: var(--white);
-    transition: background-color var(--animation);
-  }
-
-  .submitButton:hover {
-    background-color: var(--green-hover);
   }
 }

@@ -84,13 +84,6 @@
   }
 
   .customSelect {
-    position: relative;
     width: 214px;
-    padding: 13px 18px;
-    border-radius: 100px;
-    border: 1px solid rgba(29, 30, 33, 0.1);
-    background-color: var(--white);
-    cursor: pointer;
-    transition: border-color var(--animation);
   }
 }
