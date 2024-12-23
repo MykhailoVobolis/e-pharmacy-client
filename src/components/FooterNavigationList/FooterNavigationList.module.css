@@ -1,7 +1,7 @@
 .navMenu {
   display: flex;
-  gap: 32px;
   align-items: center;
+  gap: 32px;
   margin-bottom: 80px;
 }
 
@@ -15,31 +15,17 @@
 
 @media screen and (min-width: 768px) {
   .navMenu {
-    display: flex;
-    align-items: center;
     margin-bottom: 0px;
   }
 
   .link {
-    font-weight: 600;
     font-size: 16px;
     line-height: 1.25;
-    color: var(--background);
-    text-decoration: none;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .navMenu {
-    display: flex;
     gap: 50px;
-    align-items: center;
-  }
-
-  .link {
-    font-weight: 600;
-    line-height: 1.25;
-    color: var(--background);
-    text-decoration: none;
   }
 }

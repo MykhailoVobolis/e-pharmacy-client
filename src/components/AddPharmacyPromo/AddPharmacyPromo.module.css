@@ -48,6 +48,12 @@
   font-size: 14px;
   line-height: 1.29;
   color: var(--text-white);
+  transition: color var(--animation), border-color var(--animation);
+}
+
+.link:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 @media screen and (min-width: 768px) {

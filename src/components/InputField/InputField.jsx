@@ -12,6 +12,8 @@ export default function InputField({ name, label, type = "text", placeholder, se
   const adjustedVariant =
     location.pathname === "/medicine"
       ? "registerModal"
+      : location.pathname.includes("/product")
+      ? "registerModal"
       : location.pathname === "/cart"
       ? "cartPage"
       : location.pathname === "/register"
