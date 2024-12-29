@@ -79,5 +79,7 @@
     height: 15px;
     border-left: none;
     border-right: none;
+    border-top: solid 1px var(--border-nav-item);
+    border-bottom: solid 1px var(--border-nav-item);
   }
 }
